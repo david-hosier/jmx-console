@@ -17,12 +17,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.jboss</groupId>
-            <artifactId>jboss-common-core</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <scope>provided</scope>
@@ -50,7 +44,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Dependencies>org.dom4j, org.jboss.common-core</Dependencies>
+                            <Dependencies>org.dom4j</Dependencies>
                         </manifestEntries>
                     </archive>
                 </configuration>

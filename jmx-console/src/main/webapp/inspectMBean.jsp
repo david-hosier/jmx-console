@@ -21,7 +21,7 @@
 <%@ page import="org.dom4j.tree.FlyweightCDATA" %>
 <%@ page import="org.wildfly.extras.jmxconsole.control.AttrResultInfo" %>
 <%@ page import="org.wildfly.extras.jmxconsole.control.Server" %>
-<%@ page import="org.jboss.util.propertyeditor.PropertyEditors" %>
+<%@ page import="org.wildfly.extras.jmxconsole.util.WildflyUtil" %>
 
 <%
     String hostname = "";
@@ -243,7 +243,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                         out.print(
                                 "<input type='radio' name='" + attrName + "' value='False' " + falseChecked + "/>False");
                         // For wrappers, enable a 'null' selection
-                        if (attrType.equals("java.lang.Boolean") && PropertyEditors.isNullHandlingEnabled()) {
+                        if (attrType.equals("java.lang.Boolean") && WildflyUtil.isNullHandlingEnabled()) {
                             out.print("<input type='radio' name='" + attrName + "' value='' " + naChecked + "/>True");
                         }
 

@@ -26,6 +26,7 @@
         </h3></td>
     </tr>
     <%
+    	try {
         Iterator mbeans = (Iterator) Server.getDomainData("");
         int i = 0;
         while (mbeans.hasNext()) {
@@ -37,6 +38,9 @@
             out.println("  </td>");
             out.println(" </tr>");
         }
+    	} catch (Exception e) {
+    		out.println("<p>" + e.getMessage() + "</p>");
+    	}
     %>
 </table>
 

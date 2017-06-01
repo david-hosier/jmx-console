@@ -2,9 +2,9 @@
 <%@page contentType="text/html"
         import="java.beans.PropertyEditor,
                 java.io.IOException,
-                java.net.InetAddress,
-                org.jboss.util.propertyeditor.PropertyEditors"
+                java.net.InetAddress"
         %>
+<%@ page import="org.wildfly.extras.jmxconsole.util.WildflyUtil" %>
 <%
     String hostname = "";
     try {
@@ -72,7 +72,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     } else {
         String opResultString = null;
 
-        PropertyEditor propertyEditor = PropertyEditors.findEditor(opResultInfo.result.getClass());
+        PropertyEditor propertyEditor = WildflyUtil.findEditor(opResultInfo.result.getClass());
         if (propertyEditor != null) {
             propertyEditor.setValue(opResultInfo.result);
             opResultString = propertyEditor.getAsText();

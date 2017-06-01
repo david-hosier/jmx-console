@@ -42,7 +42,6 @@
     <!--
         Security constraints. Uses Application realm (present in Wildfly's default configuration) and
         jmx-admin roles.
-    -->
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>JMX Console restricted access</web-resource-name>
@@ -64,5 +63,6 @@
     <security-role>
         <role-name>jmx-console</role-name>
     </security-role>
+    -->
 
 </web-app>
